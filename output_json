@@ -1,1 +1,343 @@
-[{"@context": "http://schema.org", "@type": ["Recipe", "NewsArticle"], "headline": "Angela&#39;s Awesome Enchiladas", "datePublished": "2005-03-03T22:33:57.000-05:00", "dateModified": "2023-10-05T14:52:50.476-04:00", "author": [{"@type": "Person", "name": "MomSavedbyGrace"}], "description": "These awesome chicken enchiladas with Cheddar, olives, and green chiles are well seasoned and super creamy, thanks to sour cream and condensed soup.", "image": {"@type": "ImageObject", "url": "https://www.allrecipes.com/thmb/MaOUpj0BhKP-EX7prhUbiDGpGKA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-4x3-0894-dd127d7b2112467cbfc3f1a83c9beab3.jpg", "height": 1125, "width": 1500}, "video": {"@type": "VideoObject", "contentUrl": "https://content.jwplatform.com/videos/YzEyHxGz-ma1DlVvV.mp4", "description": "AR1189", "duration": "PT5M9S", "name": "Angela's Awesome Enchiladas", "thumbnailUrl": "https://cdn.jwplayer.com/v2/media/YzEyHxGz/poster.jpg?width=720", "uploadDate": "2021-07-09T03:14:37.150-04:00"}, "publisher": {"@type": "Organization", "name": "Allrecipes", "url": "https://www.allrecipes.com", "logo": {"@type": "ImageObject", "url": "https://www.allrecipes.com/thmb/Z9lwz1y0B5aX-cemPiTgpn5YB0k=/112x112/filters:no_upscale():max_bytes(150000):strip_icc()/allrecipes_logo_schema-867c69d2999b439a9eba923a445ccfe3.png", "width": 112, "height": 112}, "brand": "Allrecipes", "publishingPrinciples": "https://www.allrecipes.com/about-us-6648102#toc-editorial-guidelines", "sameAs": ["https://www.facebook.com/allrecipes", "https://www.instagram.com/allrecipes/", "https://www.pinterest.com/allrecipes/", "https://www.tiktok.com/@allrecipes", "https://www.youtube.com/user/allrecipes/videos", "https://twitter.com/Allrecipes", "https://flipboard.com/@Allrecipes", "https://en.wikipedia.org/wiki/Allrecipes.com", "http://linkedin.com/company/allrecipes.com"]}, "name": "Angela&#39;s Awesome Enchiladas", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "3171"}, "cookTime": "PT65M", "nutrition": {"@type": "NutritionInformation", "calories": "710 kcal", "carbohydrateContent": "53 g", "cholesterolContent": "126 mg", "fiberContent": "4 g", "proteinContent": "42 g", "saturatedFatContent": "18 g", "sodiumContent": "1765 mg", "sugarContent": "4 g", "fatContent": "36 g", "unsaturatedFatContent": "0 g"}, "prepTime": "PT45M", "recipeCategory": ["Dinner"], "recipeCuisine": ["Mexican Inspired"], "recipeIngredient": ["2 pounds skinless, boneless chicken breast meat - cut into chunks", "1.25 cups sour cream", "1 (10.5 ounce) can condensed cream of chicken soup", "0.25 teaspoon chili powder", "1 tablespoon butter", "1 small onion, chopped", "1 cup water", "1 bunch green onions, chopped, divided", "1 (4 ounce) can chopped green chiles, drained", "1 (1.25 ounce) package mild taco seasoning mix", "1 teaspoon lime juice", "0.5 teaspoon onion powder", "0.5 teaspoon garlic powder", "5 (12 inch) flour tortillas", "3 cups shredded Cheddar cheese", "1 (10 ounce) can enchilada sauce", "1 (6 ounce) can sliced black olives, drained"], "recipeInstructions": [{"@type": "HowToStep", "image": [{"@type": "ImageObject", "url": "https://www.allrecipes.com/thmb/o5G7Xe7-EziaaGNlDczd5DDQiWA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-step-1-0813-c74cf138f19b416e8fae105aec55835e.jpg"}], "text": "Place chicken into a large pot and add water to cover. Bring to a boil over high heat, then reduce the heat to medium-low, cover, and simmer until chicken is no longer pink and the juices run clear, about 10 minutes."}, {"@type": "HowToStep", "text": "Remove from the pot and let sit until cool enough to handle, 5 to 10 minutes. Shred chicken with two forks."}, {"@type": "HowToStep", "text": "Combine sour cream, condensed soup, and chili powder in a saucepan. Bring to a simmer, stirring occasionally, then turn off the heat and cover to keep warm."}, {"@type": "HowToStep", "image": [{"@type": "ImageObject", "url": "https://www.allrecipes.com/thmb/xNVD0Ue96rdM0LGQsRFhKRuh7KA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-step-3-0816-6600c464bb7140c2b4c3aafaea6fadf4.jpg"}], "text": "At the same time, melt butter in a skillet over medium heat. Add onion; cook and stir until translucent, about 5 minutes. Add shredded chicken, water, 1/2 of the green onions, green chiles, and taco seasoning; simmer for 10 minutes. Stir in lime juice, onion powder, and garlic powder; simmer for 10 more minutes."}, {"@type": "HowToStep", "text": "Preheat the oven to 350 degrees F (175 degrees C)."}, {"@type": "HowToStep", "text": "Stir 1 cup soup mixture into the skillet with the chicken. Spread remaining soup mixture over the bottom of a 9x13-inch baking dish."}, {"@type": "HowToStep", "image": [{"@type": "ImageObject", "url": "https://www.allrecipes.com/thmb/Uuad5Xd9J8ovZiCo4aoBcFKaItQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-step-4-0818-f181d0573ca7416cb56e7998f31ce406.jpg"}], "text": "Fill each tortilla with 1/5 of the chicken mixture and about 5 tablespoons Cheddar cheese."}, {"@type": "HowToStep", "image": [{"@type": "ImageObject", "url": "https://www.allrecipes.com/thmb/PfNWP8XRpA4zOgZG2x9o9MhpxmY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-step-6-0820-58bdba30127f4366953e47cdc062f5e2.jpg"}], "text": "Roll tortillas around filling and place enchiladas, seam-side down, into the baking dish. Pour enchilada sauce over top and sprinkle with remaining Cheddar, remaining green onions, and olives."}, {"@type": "HowToStep", "image": [{"@type": "ImageObject", "url": "https://www.allrecipes.com/thmb/MaOUpj0BhKP-EX7prhUbiDGpGKA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-4x3-0894-dd127d7b2112467cbfc3f1a83c9beab3.jpg"}], "text": "Bake in the preheated oven until filling is heated through and cheese is melted and bubbling, about 25 minutes."}], "recipeYield": ["8"], "totalTime": "PT115M", "review": [{"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "author": {"@type": "Person", "name": "Jennifer Uhrlaub"}, "reviewBody": "I love this recipe! I have made some changes that make it easier for me on a weeknight: I put the chicken (sometimes I even use frozen-solid breasts or thighs) in a crockpot with the taco seasoning, garlic powder, onion powder, chili powder, chopped onion + a little water in the morning. Then when I get home from work the chicken is easily shredded and I add the other filling ingredients to the crock pot and stir it up. Then I just assemble per the directions. I also use green sauce instead of red. This way it only takes 15min to get them in the oven and the meat tastes great from simmering all day in the spices. Thanks Angela!"}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "3"}, "author": {"@type": "Person", "name": "Allrecipes Member"}, "reviewBody": "I think I\u2019m gay"}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "author": {"@type": "Person", "name": "m"}, "reviewBody": "bruhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "4"}, "author": {"@type": "Person", "name": "MANDT2"}, "reviewBody": "Very good. I used green salsa Verde instead of enchilada sauce because it was what I had on hand. This dish has a subtle, refreshing citrus undernote."}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "author": {"@type": "Person", "name": "Terri Donahue"}, "reviewBody": "Great recipe! Can we freeze afterwards?"}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "author": {"@type": "Person", "name": "Jill Stephenson"}, "reviewBody": "Have made this many times and everyone raves! I always do recipes as written first. The only thing I do is add onion and celery to water when poaching the chicken. It does not lose flavour if you cool the chicken in the water. Have frozen large pans of unbaked enchiladas and they taste great. It\u2019s my party go to."}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "author": {"@type": "Person", "name": "Allrecipes Member"}, "reviewBody": "Fabulous! We have made these dozens of times and love it every time! Question: Do you think they can be frozen?"}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "author": {"@type": "Person", "name": "Lisa Kasparian"}, "reviewBody": "Love this recipe! I've made it countless times! I do skip the soup step and add black beans with the chicken mixture. I double the green onions as a garnish. I use 2 jars of enchilada sauce and serve with guac."}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "author": {"@type": "Person", "name": "Allrecipes Member"}, "reviewBody": "These are on point!"}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "author": {"@type": "Person", "name": "Mrs. Zeno"}, "reviewBody": "I used cream of chicken and more cheese than it called for, but it was delicious!"}], "mainEntityOfPage": {"@type": ["WebPage"], "@id": "https://www.allrecipes.com/recipe/83549/angelas-awesome-enchiladas/", "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@id": "https://www.allrecipes.com/recipes/1218/world-cuisine/latin-american/mexican/main-dishes/enchiladas/", "name": "Enchilada Recipes"}}, {"@type": "ListItem", "position": 2, "item": {"@id": "https://www.allrecipes.com/recipes/1514/world-cuisine/latin-american/mexican/main-dishes/enchiladas/chicken/", "name": "Chicken"}}, {"@type": "ListItem", "position": 3, "item": {"@id": "https://www.allrecipes.com/recipe/83549/angelas-awesome-enchiladas/", "name": "Angela&#39;s Awesome Enchiladas"}}]}, "reviewedBy": [{"@type": "Person", "name": "Allrecipes Test Kitchen", "url": "https://www.allrecipes.com/allrecipes-test-kitchen-7553892"}]}, "about": []}]
+[
+    {
+       "@context":"http://schema.org",
+       "@type":[
+          "Recipe",
+          "NewsArticle"
+       ],
+       "headline":"Angela&#39;s Awesome Enchiladas",
+       "datePublished":"2005-03-03T22:33:57.000-05:00",
+       "dateModified":"2023-10-05T14:52:50.476-04:00",
+       "author":[
+          {
+             "@type":"Person",
+             "name":"MomSavedbyGrace"
+          }
+       ],
+       "description":"These awesome chicken enchiladas with Cheddar, olives, and green chiles are well seasoned and super creamy, thanks to sour cream and condensed soup.",
+       "image":{
+          "@type":"ImageObject",
+          "url":"https://www.allrecipes.com/thmb/MaOUpj0BhKP-EX7prhUbiDGpGKA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-4x3-0894-dd127d7b2112467cbfc3f1a83c9beab3.jpg",
+          "height":1125,
+          "width":1500
+       },
+       "video":{
+          "@type":"VideoObject",
+          "contentUrl":"https://content.jwplatform.com/videos/YzEyHxGz-ma1DlVvV.mp4",
+          "description":"AR1189",
+          "duration":"PT5M9S",
+          "name":"Angela's Awesome Enchiladas",
+          "thumbnailUrl":"https://cdn.jwplayer.com/v2/media/YzEyHxGz/poster.jpg?width=720",
+          "uploadDate":"2021-07-09T03:14:37.150-04:00"
+       },
+       "publisher":{
+          "@type":"Organization",
+          "name":"Allrecipes",
+          "url":"https://www.allrecipes.com",
+          "logo":{
+             "@type":"ImageObject",
+             "url":"https://www.allrecipes.com/thmb/Z9lwz1y0B5aX-cemPiTgpn5YB0k=/112x112/filters:no_upscale():max_bytes(150000):strip_icc()/allrecipes_logo_schema-867c69d2999b439a9eba923a445ccfe3.png",
+             "width":112,
+             "height":112
+          },
+          "brand":"Allrecipes",
+          "publishingPrinciples":"https://www.allrecipes.com/about-us-6648102#toc-editorial-guidelines",
+          "sameAs":[
+             "https://www.facebook.com/allrecipes",
+             "https://www.instagram.com/allrecipes/",
+             "https://www.pinterest.com/allrecipes/",
+             "https://www.tiktok.com/@allrecipes",
+             "https://www.youtube.com/user/allrecipes/videos",
+             "https://twitter.com/Allrecipes",
+             "https://flipboard.com/@Allrecipes",
+             "https://en.wikipedia.org/wiki/Allrecipes.com",
+             "http://linkedin.com/company/allrecipes.com"
+          ]
+       },
+       "name":"Angela&#39;s Awesome Enchiladas",
+       "aggregateRating":{
+          "@type":"AggregateRating",
+          "ratingValue":"4.7",
+          "ratingCount":"3171"
+       },
+       "cookTime":"PT65M",
+       "nutrition":{
+          "@type":"NutritionInformation",
+          "calories":"710 kcal",
+          "carbohydrateContent":"53 g",
+          "cholesterolContent":"126 mg",
+          "fiberContent":"4 g",
+          "proteinContent":"42 g",
+          "saturatedFatContent":"18 g",
+          "sodiumContent":"1765 mg",
+          "sugarContent":"4 g",
+          "fatContent":"36 g",
+          "unsaturatedFatContent":"0 g"
+       },
+       "prepTime":"PT45M",
+       "recipeCategory":[
+          "Dinner"
+       ],
+       "recipeCuisine":[
+          "Mexican Inspired"
+       ],
+       "recipeIngredient":[
+          "2 pounds skinless, boneless chicken breast meat - cut into chunks",
+          "1.25 cups sour cream",
+          "1 (10.5 ounce) can condensed cream of chicken soup",
+          "0.25 teaspoon chili powder",
+          "1 tablespoon butter",
+          "1 small onion, chopped",
+          "1 cup water",
+          "1 bunch green onions, chopped, divided",
+          "1 (4 ounce) can chopped green chiles, drained",
+          "1 (1.25 ounce) package mild taco seasoning mix",
+          "1 teaspoon lime juice",
+          "0.5 teaspoon onion powder",
+          "0.5 teaspoon garlic powder",
+          "5 (12 inch) flour tortillas",
+          "3 cups shredded Cheddar cheese",
+          "1 (10 ounce) can enchilada sauce",
+          "1 (6 ounce) can sliced black olives, drained"
+       ],
+       "recipeInstructions":[
+          {
+             "@type":"HowToStep",
+             "image":[
+                {
+                   "@type":"ImageObject",
+                   "url":"https://www.allrecipes.com/thmb/o5G7Xe7-EziaaGNlDczd5DDQiWA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-step-1-0813-c74cf138f19b416e8fae105aec55835e.jpg"
+                }
+             ],
+             "text":"Place chicken into a large pot and add water to cover. Bring to a boil over high heat, then reduce the heat to medium-low, cover, and simmer until chicken is no longer pink and the juices run clear, about 10 minutes."
+          },
+          {
+             "@type":"HowToStep",
+             "text":"Remove from the pot and let sit until cool enough to handle, 5 to 10 minutes. Shred chicken with two forks."
+          },
+          {
+             "@type":"HowToStep",
+             "text":"Combine sour cream, condensed soup, and chili powder in a saucepan. Bring to a simmer, stirring occasionally, then turn off the heat and cover to keep warm."
+          },
+          {
+             "@type":"HowToStep",
+             "image":[
+                {
+                   "@type":"ImageObject",
+                   "url":"https://www.allrecipes.com/thmb/xNVD0Ue96rdM0LGQsRFhKRuh7KA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-step-3-0816-6600c464bb7140c2b4c3aafaea6fadf4.jpg"
+                }
+             ],
+             "text":"At the same time, melt butter in a skillet over medium heat. Add onion; cook and stir until translucent, about 5 minutes. Add shredded chicken, water, 1/2 of the green onions, green chiles, and taco seasoning; simmer for 10 minutes. Stir in lime juice, onion powder, and garlic powder; simmer for 10 more minutes."
+          },
+          {
+             "@type":"HowToStep",
+             "text":"Preheat the oven to 350 degrees F (175 degrees C)."
+          },
+          {
+             "@type":"HowToStep",
+             "text":"Stir 1 cup soup mixture into the skillet with the chicken. Spread remaining soup mixture over the bottom of a 9x13-inch baking dish."
+          },
+          {
+             "@type":"HowToStep",
+             "image":[
+                {
+                   "@type":"ImageObject",
+                   "url":"https://www.allrecipes.com/thmb/Uuad5Xd9J8ovZiCo4aoBcFKaItQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-step-4-0818-f181d0573ca7416cb56e7998f31ce406.jpg"
+                }
+             ],
+             "text":"Fill each tortilla with 1/5 of the chicken mixture and about 5 tablespoons Cheddar cheese."
+          },
+          {
+             "@type":"HowToStep",
+             "image":[
+                {
+                   "@type":"ImageObject",
+                   "url":"https://www.allrecipes.com/thmb/PfNWP8XRpA4zOgZG2x9o9MhpxmY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-step-6-0820-58bdba30127f4366953e47cdc062f5e2.jpg"
+                }
+             ],
+             "text":"Roll tortillas around filling and place enchiladas, seam-side down, into the baking dish. Pour enchilada sauce over top and sprinkle with remaining Cheddar, remaining green onions, and olives."
+          },
+          {
+             "@type":"HowToStep",
+             "image":[
+                {
+                   "@type":"ImageObject",
+                   "url":"https://www.allrecipes.com/thmb/MaOUpj0BhKP-EX7prhUbiDGpGKA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/83549-angelas-awesome-enchiladas-ddmfs-4x3-0894-dd127d7b2112467cbfc3f1a83c9beab3.jpg"
+                }
+             ],
+             "text":"Bake in the preheated oven until filling is heated through and cheese is melted and bubbling, about 25 minutes."
+          }
+       ],
+       "recipeYield":[
+          "8"
+       ],
+       "totalTime":"PT115M",
+       "review":[
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"5"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"Jennifer Uhrlaub"
+             },
+             "reviewBody":"I love this recipe! I have made some changes that make it easier for me on a weeknight: I put the chicken (sometimes I even use frozen-solid breasts or thighs) in a crockpot with the taco seasoning, garlic powder, onion powder, chili powder, chopped onion + a little water in the morning. Then when I get home from work the chicken is easily shredded and I add the other filling ingredients to the crock pot and stir it up. Then I just assemble per the directions. I also use green sauce instead of red. This way it only takes 15min to get them in the oven and the meat tastes great from simmering all day in the spices. Thanks Angela!"
+          },
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"3"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"Allrecipes Member"
+             },
+             "reviewBody":"I think I\u2019m gay"
+          },
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"5"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"m"
+             },
+             "reviewBody":"bruhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+          },
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"4"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"MANDT2"
+             },
+             "reviewBody":"Very good. I used green salsa Verde instead of enchilada sauce because it was what I had on hand. This dish has a subtle, refreshing citrus undernote."
+          },
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"5"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"Terri Donahue"
+             },
+             "reviewBody":"Great recipe! Can we freeze afterwards?"
+          },
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"5"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"Jill Stephenson"
+             },
+             "reviewBody":"Have made this many times and everyone raves! I always do recipes as written first. The only thing I do is add onion and celery to water when poaching the chicken. It does not lose flavour if you cool the chicken in the water. Have frozen large pans of unbaked enchiladas and they taste great. It\u2019s my party go to."
+          },
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"5"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"Allrecipes Member"
+             },
+             "reviewBody":"Fabulous! We have made these dozens of times and love it every time! Question: Do you think they can be frozen?"
+          },
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"5"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"Lisa Kasparian"
+             },
+             "reviewBody":"Love this recipe! I've made it countless times! I do skip the soup step and add black beans with the chicken mixture. I double the green onions as a garnish. I use 2 jars of enchilada sauce and serve with guac."
+          },
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"5"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"Allrecipes Member"
+             },
+             "reviewBody":"These are on point!"
+          },
+          {
+             "@type":"Review",
+             "reviewRating":{
+                "@type":"Rating",
+                "ratingValue":"5"
+             },
+             "author":{
+                "@type":"Person",
+                "name":"Mrs. Zeno"
+             },
+             "reviewBody":"I used cream of chicken and more cheese than it called for, but it was delicious!"
+          }
+       ],
+       "mainEntityOfPage":{
+          "@type":[
+             "WebPage"
+          ],
+          "@id":"https://www.allrecipes.com/recipe/83549/angelas-awesome-enchiladas/",
+          "breadcrumb":{
+             "@type":"BreadcrumbList",
+             "itemListElement":[
+                {
+                   "@type":"ListItem",
+                   "position":1,
+                   "item":{
+                      "@id":"https://www.allrecipes.com/recipes/1218/world-cuisine/latin-american/mexican/main-dishes/enchiladas/",
+                      "name":"Enchilada Recipes"
+                   }
+                },
+                {
+                   "@type":"ListItem",
+                   "position":2,
+                   "item":{
+                      "@id":"https://www.allrecipes.com/recipes/1514/world-cuisine/latin-american/mexican/main-dishes/enchiladas/chicken/",
+                      "name":"Chicken"
+                   }
+                },
+                {
+                   "@type":"ListItem",
+                   "position":3,
+                   "item":{
+                      "@id":"https://www.allrecipes.com/recipe/83549/angelas-awesome-enchiladas/",
+                      "name":"Angela&#39;s Awesome Enchiladas"
+                   }
+                }
+             ]
+          },
+          "reviewedBy":[
+             {
+                "@type":"Person",
+                "name":"Allrecipes Test Kitchen",
+                "url":"https://www.allrecipes.com/allrecipes-test-kitchen-7553892"
+             }
+          ]
+       },
+       "about":[
+          
+       ]
+    }
+ ]
