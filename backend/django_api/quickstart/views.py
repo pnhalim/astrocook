@@ -12,6 +12,8 @@ import json
 import os
 import re
 
+from django_api.quickstart.ingredients import *
+
 TOOL_LIST = ["knife", "cutting board", "vegetable peeler", "paring knife", "cooking spoons", "whisk", "measuring cups", "mixing bowls", "baking sheets", "spatula", "tongs", "colander", "grater", "can opener", "rolling pin", "pepper mill", "salt shaker", "saucepan", "pot", "frying pan", "kitchen timer", "mixer", "strainer", "pastry brush", "thermometer", "kitchen scale", "mortar and pestle"]
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -87,15 +89,17 @@ def fetch_article(url):
     
     ingredients, directions, title, description, author, servings, time, nutrition, image = parse_json(data_path)
 
+    INGREDIENT_LIST = []
     for ing in ingredients:   
         final_json['ingredients'].append(extract_ingredient_data(ing))
+        INGREDIENT_LIST.append(final_json['ingredients'][-1]['name'])
 
     tools = set()
     for direc in directions:
         for word in TOOL_LIST:
             if word in direc.get('text'):
                 tools.add(word)
-        final_json['instructions'].append(extract_direction_data(direc))
+        final_json['instructions'].append(extract_direction_data(direc, INGREDIENT_LIST))
 
     final_json['tools'] = list(tools)
     final_json['title'] = title.replace('&#39;','\'')
@@ -141,9 +145,9 @@ def extract_ingredient_data(ingredient_str):
     ing_obj['img'] = ""
     return ing_obj
 
-def extract_direction_data(direction_obj):
+def extract_direction_data(direction_obj, INGREDIENT_LIST):
     dir_obj = {}
-    dir_obj['description'] = direction_obj.get('text')
+    dir_obj['description'] = add_ingredient_tags(direction_obj.get('text'), INGREDIENT_LIST)
     try:
         dir_obj['image'] = direction_obj['image'][0]['url']
     except (KeyError, TypeError):
