@@ -21,6 +21,25 @@ def add_ingredient_tags(input_f, ingredients_f):
 
     return " ".join(input_f)
 
+def add_ingredient_tags2(input_f, ingredients_f):
+    """
+    Adds ingredient tags to input.
+
+    input_f = string
+    ingredients_f = ["string", "string"]
+
+    Ex.
+    put chicken into pot
+    put <div class=”chicken”>chicken<div> into pot
+    """
+    input_f = input_f.split()
+    similar_words = get_similar_words(input_f, ingredients_f)
+    out = []
+    for word, ingredient, start_index, end_index in similar_words:
+        out.append(word)
+
+    return out
+
 def get_ngrams(input_f, n=2):
     """
     Returns ngram list.

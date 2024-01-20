@@ -148,6 +148,7 @@ def extract_ingredient_data(ingredient_str):
 def extract_direction_data(direction_obj, INGREDIENT_LIST):
     dir_obj = {}
     dir_obj['description'] = add_ingredient_tags(direction_obj.get('text'), INGREDIENT_LIST)
+    dir_obj['ingredients'] = add_ingredient_tags2(direction_obj.get('text'), INGREDIENT_LIST)
     try:
         dir_obj['image'] = direction_obj['image'][0]['url']
     except (KeyError, TypeError):
