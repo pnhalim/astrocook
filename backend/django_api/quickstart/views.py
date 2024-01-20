@@ -12,6 +12,7 @@ import json
 import os
 import re
 
+TOOL_LIST = ["knife", "cutting board", "vegetable peeler", "paring knife", "cooking spoons", "whisk", "measuring cups", "mixing bowls", "baking sheets", "spatula", "tongs", "colander", "grater", "can opener", "rolling pin", "pepper mill", "salt shaker", "saucepan", "pot", "frying pan", "kitchen timer", "mixer", "strainer", "pastry brush", "thermometer", "kitchen scale", "mortar and pestle"]
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -63,7 +64,6 @@ def fetch_article(url):
         "ingredients": [],
         "instructions": []
     }
-
     article = Article(url)
     article.download()
     article.parse()
@@ -85,13 +85,27 @@ def fetch_article(url):
                 raise Exception("Couldn't parse json {}".format(e))
             json.dump(metadata_json, file)
     
-    ingredients, directions = parse_json(data_path)
+    ingredients, directions, title, description, author, servings, time, nutrition, image = parse_json(data_path)
 
     for ing in ingredients:   
         final_json['ingredients'].append(extract_ingredient_data(ing))
 
+    tools = set()
     for direc in directions:
+        for word in TOOL_LIST:
+            if word in direc.get('text'):
+                tools.add(word)
         final_json['instructions'].append(extract_direction_data(direc))
+
+    final_json['tools'] = list(tools)
+    final_json['title'] = title.replace('&#39;','\'')
+    final_json['description'] = description
+    final_json['author'] = author
+    final_json['servings'] = servings
+    final_json['time'] = time
+    final_json['nutrition'] = nutrition
+    final_json['url'] = url
+    final_json['images'] = image
 
     return JsonResponse({"result": final_json})
 
@@ -101,7 +115,18 @@ def parse_json(json_name):
             json_obj = json.load(json_file)
             ingredients = json_obj[0]['recipeIngredient']
             directions = json_obj[0]['recipeInstructions']
-            return ingredients, directions
+            title = json_obj[0]['headline']
+            description = json_obj[0]['description']
+            author = json_obj[0]['author'][0]['name']
+            servings = json_obj[0]['recipeYield'][0]
+            time = {
+                "prep": re.search("PT(\d+\w)", json_obj[0]['prepTime']).group(1),
+                "cook": re.search("PT(\d+\w)", json_obj[0]['cookTime']).group(1),
+                "total": re.search("PT(\d+\w)", json_obj[0]['totalTime']).group(1)
+            }
+            nutrition = json_obj[0]['nutrition']
+            image = json_obj[0]['image']['url']
+            return ingredients, directions, title, description, author, servings, time, nutrition, image
     except Exception as e:
         print("Couldn't parse json {}".format(e))
 
@@ -119,7 +144,11 @@ def extract_ingredient_data(ingredient_str):
 def extract_direction_data(direction_obj):
     dir_obj = {}
     dir_obj['description'] = direction_obj.get('text')
-    dir_obj['image'] = direction_obj.get('image')
+    try:
+        dir_obj['image'] = direction_obj['image'][0]['url']
+    except (KeyError, TypeError):
+        dir_obj['image'] = ""
+    
     return dir_obj
 
 class RecipeView(View):

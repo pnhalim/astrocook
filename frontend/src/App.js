@@ -1,9 +1,10 @@
 import React from "react";
+import Recipe from "./Recipe";
 
 const App = () => {
-  return (
-    <h1>Hello React</h1>
-  );
+    return (
+      <Recipe />
+    );
 };
 
 export default App;
