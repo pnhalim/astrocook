@@ -1,17 +1,6 @@
 import requests
 import difflib
 
-# API_KEY = "TsBkPnuzgZzDQbFDHYBVGPUSMVJcDSFltaWfwMTM"
-# url = "https://api.nal.usda.gov/fdc/v1/foods/list/?api_key=TsBkPnuzgZzDQbFDHYBVGPUSMVJcDSFltaWfwMTM"
-
-# response = requests.get(url)
-# ingredients = response.json()
-
-# print(ingredients)
-
-INGREDIENTS = ["chicken", "potato", "onion", "green onion"]
-example = "put the onion in the pot and stir in the green onion"
-
 def add_ingredient_tags(input_f, ingredients_f):
     """
     Adds ingredient tags to input.
@@ -23,11 +12,12 @@ def add_ingredient_tags(input_f, ingredients_f):
     put chicken into pot
     put <div class=”chicken”>chicken<div> into pot
     """
-    similar_words = get_similar_words(input_f, ingredients_f)
     input_f = input_f.split()
+    similar_words = get_similar_words(input_f, ingredients_f)
 
-    for word, index, ingredient in similar_words:
-        input_f[index] = f'<div class="{ingredient}">{word}<div>'
+    for word, ingredient, start_index, end_index in similar_words:
+        del input_f[start_index:end_index]
+        input_f.insert(start_index, f'<div class="{ingredient}">{word}<div>')
 
     return " ".join(input_f)
 
@@ -41,13 +31,14 @@ def get_similar_from_ngrams(input_f, ingredients_f, n=2):
     """
     Returns the most similar result from ngrams.
     """
-    ngrams = get_ngrams(input_f, n=n)
+    n_grams = get_ngrams(input_f, n=n)
+    n_ingredients = [ingredient for ingredient in ingredients_f if len(ingredient.split()) == n]
     
     similar = {}
-    for index, word in enumerate(ngrams):
+    for index, word in enumerate(n_grams):
         best_match = "" 
         best_match_score = 0
-        for ingredient in ingredients_f:
+        for ingredient in n_ingredients:
             similarity = difflib.SequenceMatcher(None, word, ingredient).ratio()
             if similarity > best_match_score:
                 best_match = ingredient
@@ -55,7 +46,7 @@ def get_similar_from_ngrams(input_f, ingredients_f, n=2):
 
         if best_match_score > 0.8:
             for i in range(n):
-                similar[index + i] = (word, index, best_match)
+                similar[index + i] = (word, best_match, index, index + n)
 
     return similar
 
@@ -67,21 +58,23 @@ def get_similar_words(input_f, ingredients_f):
     input_f = string
     ingredients_f = ["string", "string"]
 
-    [("word", "ingredient"), ...]
+    [("word", "ingredient", start_index, end_index), ...]
     """
-
     similar = {}
     for n in range(5, 0, -1):
-        ngrams_similar = get_similar_from_ngrams(input_f, ingredients_f, n=2)
+        ngrams_similar = get_similar_from_ngrams(input_f, ingredients_f, n=n)
         for index, val in ngrams_similar.items():
             if index not in similar:
                 similar[index] = val
-    # triples = get_ngrams(input_f, n=3)
-    # quads = get_ngrams(input_f, n=4)
-    
 
+    similar = list(set(similar.values()))
+    similar.sort(key=lambda k: k[-1])
     return similar
 
 
-# print(add_ingredient_tags(example, INGREDIENTS))
-print(get_similar_words(example.split(), INGREDIENTS))
+if __name__ == "__main__":
+    
+    INGREDIENTS = ["chicken", "potato", "onion", "green onion"]
+    example = "put the onion in the pot and stir in the green onion"
+
+    print(add_ingredient_tags(example, INGREDIENTS))
