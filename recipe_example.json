@@ -1,0 +1,38 @@
+{
+    "title": "title",
+    "author": "author",
+    "link": "link to actual recipe",
+    "images": [
+        "links to url", "another one"
+    ],
+    "ingredients": [
+        {
+            "name": "ingredient name",
+            "amount": 1, 
+            "unit": "some_unit_name",
+            "image": "some_img_url"
+        }
+    ],
+    "servings": 1,
+    "time": {
+        "prep": 60,
+        "cook": 15,
+        "total": 75
+    },
+    "instructions": [
+        {
+            "description": "do something",
+            "image": "some_img_url"
+        }, 
+        {
+            "description": "do something",
+            "image": "some_img_url"
+        }
+    ],
+    "tools": [
+        "blender", "whisk", ""
+    ], 
+    "nutrition_facts": [
+        "some stuff"
+    ]
+}
