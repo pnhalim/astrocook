@@ -17,7 +17,8 @@ def add_ingredient_tags(input_f, ingredients_f):
 
     for word, ingredient, start_index, end_index in similar_words:
         del input_f[start_index:end_index]
-        input_f.insert(start_index, f'<div className="{ingredient}">{word}<div>')
+        span = '<span style="" onClick={OnNextButtonClicked} class="ingredient">' + f'{word}</span>'
+        input_f.insert(start_index, span)
 
     return " ".join(input_f)
 

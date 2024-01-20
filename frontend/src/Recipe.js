@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import Ingredients from "./Ingredients";
+import Steps from "./Steps";
 
 const Recipe = ({url}) => {
 
     const [loaded, setLoaded] = useState(false);
+    const [started, setStarted] = useState(true);
     const [ingredients, setIngredients] = useState([]);
     const [instructions, setInstructions] = useState([]);
     const [tools, setTools] = useState([]);
@@ -44,18 +47,41 @@ const Recipe = ({url}) => {
         return () => {
             ignoreStaleRequest = true;
         };
-      }, [url]);
+    }, [url]);
     
+    const OnStartPressed = (e) => {
+        setStarted(!started);
+    }
 
     return (
-        <div>
+        <div className="Recipe">
             {
             loaded ? 
-            <div>
-                <h1>Recipe Found!</h1>
-                <h2>{title}</h2>
-            </div>
+                // Started
+                (started ?
+                    <div>
+                        {/* <div className="column">
+                            <Ingredients ingredients={ingredients}/>
+                        </div> */}
+                        <div>
+                            <Steps steps={instructions} ingredients={ingredients} />
+                        </div>
+                    </div>
+                :
+                // Landing page
+                    <div>
+                        <div>
+                            <h1>Recipe Found!</h1>
+                            <h2>{title}</h2>
+                            <img className="RecipeImage" src={images} alt={`image of ${title}`} />
+                        </div>
+                        <div className="spacer"></div>
+                        <div>
+                            <button onClick={OnStartPressed} className="button-19">Start!</button>
+                        </div>
+                    </div>)
             :
+            // Loading
             <h1>Loading...</h1>
             }
 
