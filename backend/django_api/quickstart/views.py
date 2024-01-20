@@ -98,7 +98,7 @@ def fetch_article(url):
         final_json['instructions'].append(extract_direction_data(direc))
 
     final_json['tools'] = list(tools)
-    final_json['title'] = title
+    final_json['title'] = title.replace('&#39;','\'')
     final_json['description'] = description
     final_json['author'] = author
     final_json['servings'] = servings
