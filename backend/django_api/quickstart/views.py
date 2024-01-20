@@ -143,6 +143,10 @@ def extract_ingredient_data(ingredient_str):
     ing_obj['unit'] = match.group(2)
     ing_obj['name'] = match.group(3).strip()
     ing_obj['img'] = ""
+
+    if "chicken breast" in ingredient_str:
+        ing_obj['name'] = "chicken"
+
     return ing_obj
 
 def extract_direction_data(direction_obj, INGREDIENT_LIST):
