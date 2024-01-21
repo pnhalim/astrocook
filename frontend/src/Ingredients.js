@@ -6,7 +6,7 @@ const Ingredients = ({ingredients}) => {
             <div>
                 <ul>
                     {ingredients.map(ingredient => (
-                        <li className="ingredient_list" key={ingredient.name}>{ingredient.name}</li>
+                        <li className="ingredient_list" key={ingredient.name}>{ingredient.amount} {ingredient.unit} {ingredient.name}</li>
                     ))}
                 </ul>
             </div>

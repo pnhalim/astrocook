@@ -20,8 +20,8 @@ h2 {
     margin: 3rem 7vw;
 }
 .RecipeImage {
-    width: 50%;
-    height: 50vh;
+    width: 100%;
+    height: 80%;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -109,7 +109,7 @@ h2 {
 }
 
 .ingredient_list {
-    font-size: 0.5rem;
+
 }
 .StepImage {
     width: 90%;
@@ -135,4 +135,24 @@ h2 {
 .ingredient:hover {
   color: #EDDDD4;
   cursor: pointer;
+}
+
+.hi {
+  padding-top: 100px;
+}
+
+.hi2 {
+  color:#EDDDD4; font-size: 100px; text-align: center;margin-bottom: 30px;
+}
+
+.hi3 {
+  text-align: center;
+}
+
+.hi4 {
+  border: none;border-radius: 10px;padding-left: 10px;padding-right: 180px; padding-top: 10px; padding-bottom: 10px; font-size: 20px; box-shadow:0 0 15px 4px rgba(255,255,255,0.2);
+}
+
+.hi5 {
+  border: none;border-radius: 10px;background-color: #EF5B5B;padding: 16px 32px; margin: 15px; color: #EDDDD4; font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

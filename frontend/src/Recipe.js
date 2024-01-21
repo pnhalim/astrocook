@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Ingredients from "./Ingredients";
+import Tools from "./Tools";
 import Steps from "./Steps";
 
 const Recipe = ({url}) => {
 
     const [loaded, setLoaded] = useState(false);
-    const [started, setStarted] = useState(true);
+    const [started, setStarted] = useState(false);
     const [ingredients, setIngredients] = useState([]);
     const [instructions, setInstructions] = useState([]);
     const [tools, setTools] = useState([]);
@@ -17,9 +18,8 @@ const Recipe = ({url}) => {
     const [nutrition, setNutrition] = useState({});
     const [images, setImages] = useState("");
 
-    useEffect((url) => {
+    useEffect(() => {
         let ignoreStaleRequest = false;
-        url = 'https://www.allrecipes.com/recipe/83549/angelas-awesome-enchiladas/'
         let api_url = `http://localhost:8000/api/recipe/?url=${url}`
 
         fetch(api_url)
@@ -61,7 +61,7 @@ const Recipe = ({url}) => {
                 (started ?
                     <div>
                         {/* <div className="column">
-                            <Ingredients ingredients={ingredients}/>
+                            
                         </div> */}
                         <div>
                             <Steps steps={instructions} ingredients={ingredients} />
@@ -71,9 +71,23 @@ const Recipe = ({url}) => {
                 // Landing page
                     <div>
                         <div>
-                            <h1>Recipe Found!</h1>
-                            <h2>{title}</h2>
-                            <img className="RecipeImage" src={images} alt={`image of ${title}`} />
+                        <h1>Recipe Found!</h1>
+                            <div className="columns2">
+                                <div>
+                                <h2>{title}</h2>
+                                <h3>Ingredients</h3>
+                                <Ingredients ingredients={ingredients}/>
+                                {tools && 
+                                <div>
+                                    <h3>Tools</h3>
+                                <Tools tools={tools}/>
+                                </div>}
+                                </div>
+                                <div>
+                                    <div className="spacer"></div>
+                                <img className="RecipeImage" src={images} alt={`image of ${title}`} />
+                                </div>
+                            </div>
                         </div>
                         <div className="spacer"></div>
                         <div>
