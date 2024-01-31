@@ -10,9 +10,15 @@ Full-stack cooking web app!
 - **Front end built with ReactJS.** Our front end sends API requests based on which recipe the user inputs and then displays the relevant information. The goal is to be as user-friendly and simple as possible!
 
 ## The Product
-<img src="https://github.com/pnhalim/cooking-space/assets/90876112/f096d97f-c49c-4035-a850-86fde5972e17" alt="home page" height="230"/>
-<img src="https://github.com/pnhalim/cooking-space/assets/90876112/9ea7c6b8-708e-48b9-8e1a-c168bd3d45ae" alt="recipe page" height="230"/>
-<img src="https://github.com/pnhalim/cooking-space/assets/90876112/94326bfa-24ba-4a8d-a7ec-ea7790168d41" alt="step page" height="230"/>
+<p align="center">
+  <img src="https://github.com/pnhalim/cooking-space/assets/90876112/f096d97f-c49c-4035-a850-86fde5972e17" alt="home page" width="500"/>
+</p>
+<p align="center">
+  <img src="https://github.com/pnhalim/cooking-space/assets/90876112/9ea7c6b8-708e-48b9-8e1a-c168bd3d45ae" alt="recipe page" width="500"/>
+</p>
+<p align="center">
+  <img src="https://github.com/pnhalim/cooking-space/assets/90876112/94326bfa-24ba-4a8d-a7ec-ea7790168d41" alt="step page" width="500"/>
+</p>
 
 ## The Team
 - Patrick Halim -> https://github.com/pnhalim
