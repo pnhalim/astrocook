@@ -2,7 +2,7 @@
 Hackathon project made in ~ 6 hours
 
 ## The Goal
-Recipe websites are filled with so much unnecessary information and ads, which make them really annoying and confusing to use. We wanted to make a web app that puts the user experience first by keeping things simple, straightforward, and efficient! Users can enter a recipe URL and see all necessary ingredients and tools from the get-go. Then, they click through each of the steps one at a time with pictures for more information. Relevant ingredients in each step are highlighted, and the user can hover over the word to see the required quanitity. Users can also easily convert quantities to be measured in different units (ex. grams -> cups).  
+Recipe websites are filled with so much unnecessary information and ads, which make them really annoying and confusing to use. **We wanted to make a web app that puts the user experience first by keeping things simple, straightforward, and efficient**! Users can enter a recipe URL and see all necessary ingredients and tools from the get-go. Then, they click through each of the steps one at a time with pictures for more information. Relevant ingredients in each step are highlighted, and the user can hover over the word to see the required quanitity. Users can also easily convert quantities to be measured in different units (ex. grams -> cups).  
 
 ## The Design
 Full-stack cooking web app!
