@@ -1,5 +1,6 @@
 # Cooking Space
-Hackathon project made in ~ 6 hours
+Hackathon project made in ~ 6 hours by [Patrick Halim](https://github.com/pnhalim), [Nathan Yap](https://github.com/Nathan-Yap), [Adhav Rajesh](https://github.com/radhav04
+)
 
 ## The Goal
 Recipe websites are filled with so much unnecessary information and ads, which make them really annoying and confusing to use. **We wanted to make a web app that puts the user experience first by keeping things simple, straightforward, and efficient**! Users can enter a recipe URL and see all necessary ingredients and tools from the get-go. Then, they click through each of the steps one at a time with pictures for more information. Relevant ingredients in each step are highlighted, and the user can hover over the word to see the required quanitity. Users can also easily convert quantities to be measured in different units (ex. grams -> cups).  
@@ -20,11 +21,6 @@ Full-stack cooking web app!
   <img src="https://github.com/pnhalim/cooking-space/assets/90876112/94326bfa-24ba-4a8d-a7ec-ea7790168d41" alt="step page" width="500"/>
 </p>
 
-## The Team
-- Patrick Halim -> https://github.com/pnhalim
-- Nathan Yap -> https://github.com/Nathan-Yap
-- Adhav Rajesh -> https://github.com/radhav04
-
 ## Instructions
 ### Back End
 ```
@@ -40,3 +36,7 @@ cd ./frontend
 npm i
 npm run dev
 ```
+## The Team
+- Patrick Halim -> https://github.com/pnhalim
+- Nathan Yap -> https://github.com/Nathan-Yap
+- Adhav Rajesh -> https://github.com/radhav04
