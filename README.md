@@ -1,4 +1,4 @@
-# Cooking Space
+# Astrocook
 The _ultimate cooking assistant_ by [Patrick Halim](https://github.com/pnhalim), [Nathan Yap](https://github.com/Nathan-Yap), [Adhav Rajesh](https://github.com/radhav04)
 
 Recipe websites are filled with so much unnecessary information and ads, which make them really annoying and confusing to use. **We wanted to make a web app that puts the user experience first by keeping things simple, straightforward, and efficient**! Users can enter a recipe URL and see all necessary ingredients and tools from the get-go. Then, they click through each of the steps one at a time with pictures for more information. Relevant ingredients in each step are highlighted, and the user can hover over the word to see the required quanitity. Users can also easily convert quantities to be measured in different units (ex. grams -> cups).  
