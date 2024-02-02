@@ -86,62 +86,61 @@ def fetch_article(url):
             except Exception as e:
                 raise Exception("Couldn't parse json {}".format(e))
             json.dump(metadata_json, file)
-    
-    ingredients, directions, title, description, author, servings, time, nutrition, image = parse_json(data_path)
+            
+    final_json.update(parse_json(data_path))
 
     INGREDIENT_LIST = []
-    for ing in ingredients:   
+    for ing in final_json['ingredients-raw']:   
         final_json['ingredients'].append(extract_ingredient_data(ing))
         INGREDIENT_LIST.append(final_json['ingredients'][-1]['name'])
 
     tools = set()
-    for direc in directions:
+    for direc in final_json['directions-raw']:
         for word in TOOL_LIST:
             if word in direc.get('text'):
                 tools.add(word)
         final_json['instructions'].append(extract_direction_data(direc, INGREDIENT_LIST))
-
-    final_json['tools'] = list(tools)
-    final_json['title'] = title.replace('&#39;','\'')
-    final_json['description'] = description
-    final_json['author'] = author
-    final_json['servings'] = servings
-    final_json['time'] = time
-    final_json['nutrition'] = nutrition
-    final_json['url'] = url
-    final_json['images'] = image
 
     return JsonResponse({"result": final_json})
 
 def parse_json(json_name):
     try:
         with open(json_name, "r") as json_file:
-            json_obj = json.load(json_file)
-            ingredients = json_obj[0]['recipeIngredient']
-            directions = json_obj[0]['recipeInstructions']
-            title = json_obj[0]['headline']
-            description = json_obj[0]['description']
-            author = json_obj[0]['author'][0]['name']
-            servings = json_obj[0]['recipeYield'][0]
-            time = {
-                "prep": re.search("PT(\d+\w)", json_obj[0]['prepTime']).group(1),
-                "cook": re.search("PT(\d+\w)", json_obj[0]['cookTime']).group(1),
-                "total": re.search("PT(\d+\w)", json_obj[0]['totalTime']).group(1)
+            json_obj = json.load(json_file)[0]
+            recipe_info = {}
+            recipe_info['ingredients-raw'] = json_obj.get('recipeIngredient', 'n/a')
+            recipe_info['directions-raw'] = json_obj.get('recipeInstructions', 'n/a')
+            recipe_info['title'] = json_obj.get('headline', 'n/a').replace("&#39;", "\'")
+            recipe_info['description'] = json_obj.get('description', 'n/a')
+            recipe_info['author'] = json_obj['author'][0].get('name', 'n/a') if 'author' in json_obj else 'n/a'
+            recipe_info['servings'] = json_obj.get('recipeYield', ['n/a'])[0]
+            recipe_info['nutrition'] = json_obj.get('nutrition', 'n/a')
+            recipe_info['image'] = json_obj.get('image', {}).get('url', 'n/a')          
+            recipe_info['time'] = {
+                "prep": timestamp_regex(json_obj.get('prepTime', 'n/a')),
+                "cook": timestamp_regex(json_obj.get('prepTime', 'n/a')),
+                "total": timestamp_regex(json_obj.get('prepTime', 'n/a'))
             }
-            nutrition = json_obj[0]['nutrition']
-            image = json_obj[0]['image']['url']
-            return ingredients, directions, title, description, author, servings, time, nutrition, image
+            return recipe_info
+    except KeyError:
+        print("Error getting json values")
     except Exception as e:
         print("Couldn't parse json {}".format(e))
+
+def timestamp_regex(q):
+    if not q: return "n/a"
+    found = re.search("PT(\d+\w)", q).group(1)
+    return found if found else "n/a"
+
 
 def extract_ingredient_data(ingredient_str):
     ing_obj = {}
     # Regex matches decimal numbers, and we grab the first one 
     # (NOTE: may have issues with "1 pound (16 oz)" parentheses)
-    match = re.search("(\d+\.?\d*)(?:\s\(.+\))?\s(cup|pound|teaspoon|tablespoon|ounce|bunch|can|package|gram|kilogram|tbsp|tsp|g|oz|lb|)?(?:s)?(.+)", ingredient_str)
-    ing_obj['amount'] = match.group(1)
-    ing_obj['unit'] = match.group(2)
-    ing_obj['name'] = match.group(3).strip()
+    match = re.search("(\d+\.?\d*)(?:\s\(.+\))?\s(cup|pound|teaspoon|tablespoon|ounce|bunch|can|package|gram|kilogram|tbsp|tsp|g|oz|lb|)?(?:s)?(.+)", ingredient_str)    
+    ing_obj['amount'] = match.group(1) if match else "n/a"
+    ing_obj['unit'] = match.group(2) if match else "n/a"
+    ing_obj['name'] = match.group(3).strip() if match else "n/a"
     ing_obj['img'] = ""
 
     if "chicken breast" in ingredient_str:

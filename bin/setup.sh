@@ -13,6 +13,6 @@ cd ..
 
 # bash script setup
 sudo apt install gnome-terminal
-chmod +x ./bin/run_backend.sh
-chmod +x ./bin/run_frontend.sh
+chmod +x ./bin/backend.sh
+chmod +x ./bin/frontend.sh
 chmod +x ./bin/run_all.sh

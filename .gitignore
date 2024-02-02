@@ -4,6 +4,9 @@ bundle.js
 *.js.map
 *.pyc
 __pycache__/
+backend/django_api/__pycache__/
+backend/django_api/quickstart/__pycache__/
+backend/article_data/
 *.egg-info*
 dist/
 env/
