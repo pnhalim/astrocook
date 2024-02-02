@@ -1,29 +1,75 @@
-@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+@import url('https://fonts.googleapis.com/css?family=Jost:400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
-    background-color: #192347;
-    color: #EDDDD4;
-    font-family: "Open Sans";
+  background-color: #FCDE9C;
+  color: #333745;
+  font-family: "Open Sans";
+  padding: 0;
+  margin: 0;
 }
 h1, h2 {
-    font-family: 'Times New Roman', Times, serif;
+  font-family: 'Jost', Helvetica, Arial, sans-serif;
+  margin: 0;
 }
 h1 {
-    font-size: clamp(1.5rem, 10vw, 3rem);
+  font-size: clamp(1.5rem, 10vw, 3rem);
+  font-weight: 700;
+  letter-spacing: .1rem;
 }
 h2 {
-    font-size: clamp(1rem, 7vw, 2rem);
+  font-size: clamp(1rem, 7vw, 2rem);
+  font-weight: 500;
+  letter-spacing: .05rem;
+}
+
+.align {
+  margin: 0 2rem;
+}
+
+.center-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.center-text {
+  text-align: center;
+}
+
+.padding-horizontal {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.search-bar {
+  width: calc(100% - 4rem);
+  border-radius: 2rem;
+  border: none;
+  background-color: white;
+  padding: 0.5rem;
+  filter: drop-shadow(0px 5px 3px #0000003f);
+}
+.text-input {
+  width: 100%;
+  background-color: transparent;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+}
+
+.flex {
+  display: flex;
 }
 
 .Recipe {
-    margin: 3rem 7vw;
+  margin: 3rem 7vw;
 }
 .RecipeImage {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* CSS */
@@ -93,13 +139,17 @@ h2 {
 }
 
 .spacer {
-    height: 2rem;
-    display: block;
+  height: 2rem;
+  display: block;
+}
+.spacer-mini {
+  height: 1rem;
+  display: block;
 }
 
 .columns {
-    display: grid;
-    grid-template-columns: 40% 60%;
+  display: grid;
+  grid-template-columns: 40% 60%;
 }
 
 .columns2 {

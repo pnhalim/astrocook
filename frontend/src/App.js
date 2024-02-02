@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Recipe from "./Recipe";
 
+import logo from './img/chef-hat.png'
+import search from './img/search-icon.png'
+
+
 const App = () => {
 
   const [url, setUrl] = useState("");
@@ -15,13 +19,23 @@ const App = () => {
       {
         url === "" ?
         <div>
-          <div className="hi"></div>
-          <h1 className="hi2">Astrocook!</h1>
-          <form className="hi3" onSubmit={OnFormSubmit} >
-            <input type="text" className="text-input h4" placeholder="URL" name="value"/>
-            <br></br>
-            <input className="hi5" type="submit" value="Go!"/>
-          </form>
+          <div className="center-parent">
+            <div className="spacer"></div>
+            <div className="spacer"></div>
+            <img width={130} src={logo}></img>
+            <div className="spacer-mini"></div>
+            <h1 className="center-text">astrocook</h1>
+            <div className="spacer-mini"></div>
+            <div className="search-bar flex">
+              <img className="padding-horizontal" width={20} src={search}></img>
+              <form onSubmit={OnFormSubmit}>
+                <input type="text" className="text-input" placeholder="Enter URL" name="value"/>
+                <input type="submit" style={{display: "none"}} />
+              </form>
+            </div>
+          </div>
+          <div className="spacer"></div>
+          <h2 className="align">Recents</h2>
         </div>
         :
         <Recipe url={url}/>
