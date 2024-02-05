@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Jost:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Jost:400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
@@ -8,9 +8,12 @@ body {
   padding: 0;
   margin: 0;
 }
-h1, h2 {
+h1, h2, h3, h4 {
   font-family: 'Jost', Helvetica, Arial, sans-serif;
   margin: 0;
+}
+p {
+  margin: 0.25rem 0;
 }
 h1 {
   font-size: clamp(1.5rem, 10vw, 3rem);
@@ -18,23 +21,39 @@ h1 {
   letter-spacing: .1rem;
 }
 h2 {
-  font-size: clamp(1rem, 7vw, 2rem);
+  font-size: 1.5rem;
   font-weight: 500;
+  letter-spacing: .05rem;
+  line-height: 1.8rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
   letter-spacing: .05rem;
 }
 
 .align {
-  margin: 0 2rem;
+  margin: 0 1.5rem;
 }
-
 .center-parent {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.align-right {
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+}
 .center-text {
   text-align: center;
+}
+.fade {
+  color: #333745c5;
 }
 
 .padding-horizontal {
@@ -61,81 +80,10 @@ h2 {
 .flex {
   display: flex;
 }
-
-.Recipe {
-  margin: 3rem 7vw;
-}
-.RecipeImage {
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* CSS */
-.button-19 {
-  appearance: button;
-  background-color: #1899D6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: din-round,sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .8px;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  overflow: visible;
-  padding: 13px 16px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  transform: translateZ(0);
-  transition: filter .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.button-19:after {
-  background-clip: padding-box;
-  background-color: #1CB0F6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  bottom: -4px;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.button-19:main,
-.button-19:focus {
-  user-select: auto;
-}
-
-.button-19:hover:not(:disabled) {
-  filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
-}
-
-.button-19:disabled {
-  cursor: auto;
-}
-
-.button-19:active {
-  border-width: 4px 0 0;
-  background: none;
+.flex-wrap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .spacer {
@@ -146,63 +94,60 @@ h2 {
   height: 1rem;
   display: block;
 }
+.spacer-mini-mini {
+  height: 0.5rem;
+  display: block;
+}
 
 .columns {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-auto-flow: column;
+  column-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
 }
 
-.columns2 {
-  display: grid;
-  grid-template-columns: 48% 48%;
-  column-gap: 4%;
+.card {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  filter: drop-shadow(0px 5px 3px #00000041);
+}
+.card h2 {
+  color: #4c9a68;
+}
+.card img {
+  width: min(100%, 20rem);
 }
 
-.ingredient_list {
-
-}
-.StepImage {
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    border-radius: 10px;
+.underline {
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid #00000041;
 }
 
-.Steps.p {
-  width: 100%;
+.capsule {
+  border-radius: 2rem;
+  background-color: #C9B1BD;
+  padding: 0 0.6rem;
+  margin: 0.2rem 0.25rem 0 0.25rem;
+  width: fit-content;
+  font-size: 0.8rem;
 }
 
-.StepContent {
-  height: 55vh;
+button {
+  background-color: #4c9a68;
+  border: solid 2px #4c9a68;
+  border-radius: 1rem;
+  padding: 0.2rem 1.2rem;
+  color: white;
+  font-family: "Open Sans";
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  transition: all ease-out 0.1s;
 }
-
-.ingredient {
-  font-weight: bold;
-  color: #EF5B5B;
-  transition: all 0.2s ease-in-out;
-}
-
-.ingredient:hover {
-  color: #EDDDD4;
+button:hover {
   cursor: pointer;
+  filter: drop-shadow(0px 2px 2px #00000029);
 }
 
-.hi {
-  padding-top: 100px;
-}
-
-.hi2 {
-  color:#EDDDD4; font-size: 100px; text-align: center;margin-bottom: 30px;
-}
-
-.hi3 {
-  text-align: center;
-}
-
-.hi4 {
-  border: none;border-radius: 10px;padding-left: 10px;padding-right: 180px; padding-top: 10px; padding-bottom: 10px; font-size: 20px; box-shadow:0 0 15px 4px rgba(255,255,255,0.2);
-}
-
-.hi5 {
-  border: none;border-radius: 10px;background-color: #EF5B5B;padding: 16px 32px; margin: 15px; color: #EDDDD4; font-size: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Ingredients from "./Ingredients";
-import Tools from "./Tools";
 import Steps from "./Steps";
+import RecipeCard from "./RecipeCard";
 
 const Recipe = ({url}) => {
 
@@ -16,7 +15,7 @@ const Recipe = ({url}) => {
     const [servings, setServings] = useState("");
     const [time, setTime] = useState({});
     const [nutrition, setNutrition] = useState({});
-    const [images, setImages] = useState("");
+    const [image, setImage] = useState("");
 
     useEffect(() => {
         let ignoreStaleRequest = false;
@@ -38,8 +37,10 @@ const Recipe = ({url}) => {
                     setServings(data.result.servings);
                     setTime(data.result.time);
                     setNutrition(data.result.nutrition);
-                    setImages(data.result.images);   
-                    setLoaded(true);       
+                    setImage(data.result.image);   
+                    setLoaded(true);   
+
+                    console.log(data.result);
                 }
             })
             .catch((error) => console.log(error));
@@ -54,49 +55,37 @@ const Recipe = ({url}) => {
     }
 
     return (
-        <div className="Recipe">
+        <div className="align">
             {
             loaded ? 
                 // Started
                 (started ?
                     <div>
-                        {/* <div className="column">
-                            
-                        </div> */}
-                        <div>
-                            <Steps steps={instructions} ingredients={ingredients} />
-                        </div>
+                        <Steps steps={instructions} ingredients={ingredients} />
                     </div>
                 :
                 // Landing page
                     <div>
-                        <div>
-                        <h1>Recipe Found!</h1>
-                            <div className="columns2">
-                                <div>
-                                <h2>{title}</h2>
-                                <h3>Ingredients</h3>
-                                <Ingredients ingredients={ingredients}/>
-                                {tools && 
-                                <div>
-                                    <h3>Tools</h3>
-                                <Tools tools={tools}/>
-                                </div>}
-                                </div>
-                                <div>
-                                    <div className="spacer"></div>
-                                <img className="RecipeImage" src={images} alt={`image of ${title}`} />
-                                </div>
-                            </div>
-                        </div>
+                        <h2>Recipe Found!</h2>
+                        <div className="spacer-mini"></div>
+                        <RecipeCard 
+                            title={title} 
+                            author={author}
+                            url={url} 
+                            servings={servings}
+                            time={time}
+                            description={description}
+                            ingredients={ingredients} 
+                            tools={tools} 
+                            image={image} 
+                            OnStartPressed={OnStartPressed} 
+                        />
                         <div className="spacer"></div>
-                        <div>
-                            <button onClick={OnStartPressed} className="button-19">Start!</button>
-                        </div>
+                        <div className="spacer"></div>
                     </div>)
             :
             // Loading
-            <h1>Loading...</h1>
+            <h2>Loading...</h2>
             }
 
         </div>
