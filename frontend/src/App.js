@@ -41,7 +41,9 @@ const App = () => {
             </div>
           </div>
           <div className="spacer"></div>
-          <h2 className="align">Recents</h2>
+          <div className="center-parent">
+            <h2 className="align-small">Recents</h2>
+          </div>
         </div>
         :
         <div className="center-parent">
