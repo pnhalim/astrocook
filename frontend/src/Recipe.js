@@ -5,7 +5,7 @@ import RecipeCard from "./RecipeCard";
 const Recipe = ({url}) => {
 
     const [loaded, setLoaded] = useState(false);
-    const [started, setStarted] = useState(false);
+    const [started, setStarted] = useState(false); 
     const [ingredients, setIngredients] = useState([]);
     const [instructions, setInstructions] = useState([]);
     const [tools, setTools] = useState([]);

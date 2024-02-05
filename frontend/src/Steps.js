@@ -1,4 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
+import up from './img/arrow-up.png';
+import down from './img/arrow-down.png';
+
 
 const Steps = ({steps, ingredients}) => {
 
@@ -18,27 +22,32 @@ const Steps = ({steps, ingredients}) => {
     }
 
     return (
-        <div className="Steps">
-            <h1>Step {index + 1}</h1>
-            <div className="StepContent">
+        <div className="center-parent">
+            <div className="spacer"></div>
+            <div>
+                <button style={ { display: index > 0 ? 'block' : 'none' } }onClick={OnBackButtonClicked} className="arrow">
+                    <img src={up} alt="up" />
+                </button>
+                <div className="spacer"></div>
+            </div>
+            <div className="card middle">
+                <h2>Step {index + 1}</h2>
+                <p dangerouslySetInnerHTML={{ __html: steps[index].description}}></p>
                 {
-                    image !== "" ?
-                    <div className="columns">
+                    image !== "" && <div className="center-parent">
+                        <div className="spacer-mini-mini"></div>
                         <img className="StepImage" src={steps[index].image} alt={`image of step ${index + 1}`} />
-                        <p dangerouslySetInnerHTML={{ __html: steps[index].description}}></p>
                     </div>
-                    :
-                    <p dangerouslySetInnerHTML={{ __html: steps[index].description}}></p>
                 }
             </div>
-            <div className="columns2">
-                <div>
-                    <button style={ { display: index > 0 ? 'block' : 'none' } }onClick={OnBackButtonClicked} className="button-19">Back!</button>
-                </div>
-                <div>
-                    <button style={ { display: index < steps.length-1 ? 'block' : 'none' } } onClick={OnNextButtonClicked} className="button-19">Next!</button>
-                </div>
+            <div className="spacer"></div>
+            <div>
+                <button style={ { display: index < steps.length-1 ? 'block' : 'none' } } onClick={OnNextButtonClicked} className="arrow">
+                    <img src={down} alt="down" />
+                </button>
             </div>
+            <div className="spacer"></div>
+            <div className="spacer"></div>
         </div>
     );
 };

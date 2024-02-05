@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Recipe from "./Recipe";
 
-import logo from './img/chef-hat.png'
-import search from './img/search-icon.png'
+import logo from './img/chef-hat.png';
+import search from './img/search-icon.png';
 
 
 const App = () => {
