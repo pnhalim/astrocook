@@ -1,0 +1,12 @@
+.prev-step, .next-step {
+  height: 7rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .prev-step, .next-step {
+    cursor: pointer;
+    height: 80vh;
+    width: max(7rem, 20vw);
+  }
+}

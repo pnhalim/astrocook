@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+import Cursor from './Cursor';              // TODO
+import './Steps.css';
 
-import up from './img/arrow-up.png';
-import down from './img/arrow-down.png';
+import up from './img/up-arrow.png';
+import down from './img/down-arrow.png';
+import left from './img/left-arrow.png';
+import right from './img/right-arrow.png';
 
 
 const Steps = ({steps, ingredients}) => {
 
     const [index, setIndex] = useState(0);
     const [image, setImage] = useState(steps[0].image.trim());
+    
 
     const OnNextButtonClicked = (e) => {
         let newIndex = Math.min(index + 1, steps.length - 1)
@@ -22,15 +27,14 @@ const Steps = ({steps, ingredients}) => {
     }
 
     return (
-        <div className="center-parent">
-            <div className="spacer"></div>
-            <div>
-                <button style={ { display: index > 0 ? 'block' : 'none' } }onClick={OnBackButtonClicked} className="arrow">
-                    <img src={up} alt="up" />
+        <div className="center-parent columns-desktop-flex">
+            <div className="prev-step center-parent" onClick={OnBackButtonClicked}>
+                <button style={ { display: index > 0 ? 'block' : 'none' } }onClick={OnBackButtonClicked} className="arrow center-parent">
+                    <img className="mobile-only" src={up} alt="previous" />
+                    <img className="desktop-only" src={left} alt="previous" />
                 </button>
-                <div className="spacer"></div>
             </div>
-            <div className="card middle">
+            <div className="card middle align-small">
                 <h2>Step {index + 1}</h2>
                 <p dangerouslySetInnerHTML={{ __html: steps[index].description}}></p>
                 {
@@ -40,14 +44,12 @@ const Steps = ({steps, ingredients}) => {
                     </div>
                 }
             </div>
-            <div className="spacer"></div>
-            <div>
-                <button style={ { display: index < steps.length-1 ? 'block' : 'none' } } onClick={OnNextButtonClicked} className="arrow">
-                    <img src={down} alt="down" />
+            <div className="next-step center-parent" onClick={OnNextButtonClicked}>
+                <button style={ { display: index < steps.length-1 ? 'block' : 'none' } } onClick={OnNextButtonClicked} className="arrow center-parent">
+                    <img className="mobile-only" src={down} alt="next" />
+                    <img className="desktop-only" src={right} alt="next" />
                 </button>
             </div>
-            <div className="spacer"></div>
-            <div className="spacer"></div>
         </div>
     );
 };
