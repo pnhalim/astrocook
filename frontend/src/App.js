@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Recipe from "./Recipe";
+// Adhav did this and will delete later lol
+// import { RecentSearch } from "./recentSearch.js"
+import { CookiesProvider, useCookies } from "react-cookie";
 
 import logo from './img/chef-hat.png';
 import search from './img/search-icon.png';

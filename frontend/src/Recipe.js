@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Steps from "./Steps";
 import RecipeCard from "./RecipeCard";
+import { CookiesProvider, useCookies } from "react-cookie";
+import { RecentSearch } from "./recentSearch"
 
 const Recipe = ({url}) => {
 
+    const [cookies, setCookie] = useCookies(["user"]);
     const [loaded, setLoaded] = useState(false);
     const [started, setStarted] = useState(false); 
     const [ingredients, setIngredients] = useState([]);
@@ -51,6 +54,7 @@ const Recipe = ({url}) => {
     }, [url]);
     
     const OnStartPressed = (e) => {
+        setCookie("recent", JSON.stringify(new RecentSearch(title, "url", time)), []);
         setStarted(!started);
     }
 
@@ -85,7 +89,7 @@ const Recipe = ({url}) => {
                     </div>)
             :
             // Loading
-            <h2>Loading...</h2>
+            <h2>Astrocooking!...</h2>
             }
 
         </div>
