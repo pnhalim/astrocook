@@ -9,7 +9,6 @@ import search from './img/search-icon.png';
 
 
 const App = () => {
-
   const [url, setUrl] = useState("");
   const [currentTextBox, setCurrentTextBox] = useState("")
 

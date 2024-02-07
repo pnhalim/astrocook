@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.7",
     "fs.promises": "^0.1.2",
+    "js-cookie": "^3.0.5",
     "react": "^18.0.0",
     "react-cookie": "^7.0.2",
     "react-dom": "^18.0.0"

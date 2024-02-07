@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Steps from "./Steps";
 import RecipeCard from "./RecipeCard";
-import { CookiesProvider, useCookies } from "react-cookie";
-import { RecentSearch } from "./recentSearch"
+import Cookies from 'js-cookie';
+import { RecentSearch } from "./cookieModels"
 
 const Recipe = ({url}) => {
 
-    const [cookies, setCookie] = useCookies(["user"]);
     const [loaded, setLoaded] = useState(false);
     const [started, setStarted] = useState(false); 
     const [ingredients, setIngredients] = useState([]);
@@ -54,7 +53,23 @@ const Recipe = ({url}) => {
     }, [url]);
     
     const OnStartPressed = (e) => {
-        setCookie("recent", JSON.stringify(new RecentSearch(title, "url", time)), []);
+        // var cookie = cookies.get("recent")
+        // console.log(cookie);
+        let cookie = Cookies.get("recent");
+        let cookieList;
+        if(cookie == null) {
+            cookieList = [new RecentSearch(title, url, time)]
+        }
+        else {
+            cookieList = JSON.parse(cookie);
+            for(let i = 0; i < cookieList.length; i++) {
+                if(cookieList[i]["url"] == url) {
+                    cookieList.splice(i, 1);
+                }
+            }
+            cookieList.push(new RecentSearch(title, url, time))
+        }
+        Cookies.set("recent", JSON.stringify(cookieList)); 
         setStarted(!started);
     }
 
