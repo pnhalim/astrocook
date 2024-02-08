@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Cursor from './Cursor';              // TODO
+import Cursor from './Cursor';
 import './Steps.css';
 
 import up from './img/up-arrow.png';
@@ -12,6 +12,10 @@ const Steps = ({steps, ingredients}) => {
 
     const [index, setIndex] = useState(0);
     const [image, setImage] = useState(steps[0].image.trim());
+
+    const [leftButtonHovered, setLeftButtonHovered] = useState(false);
+    const [rightButtonHovered, setRightButtonHovered] = useState(false);
+    const [cursorImage, setCursorImage] = useState(left);
     
 
     const OnNextButtonClicked = (e) => {
@@ -28,8 +32,17 @@ const Steps = ({steps, ingredients}) => {
 
     return (
         <div className="center-parent columns-desktop-flex">
-            <div className="prev-step center-parent" onClick={OnBackButtonClicked}>
-                <button style={ { display: index > 0 ? 'block' : 'none' } }onClick={OnBackButtonClicked} className="arrow center-parent">
+            <div className={"prev-step center-parent" + (index > 0 ? " no-cursor" : "") } onClick={OnBackButtonClicked} 
+                onMouseEnter={(e) => { setLeftButtonHovered(index > 0); setCursorImage(left); }}
+                onMouseLeave={(e) => { setLeftButtonHovered(false); }}
+                >
+                <button style={{ 
+                                display: index > 0 ? 'block' : 'none', 
+                                height: leftButtonHovered ? '0px' : '3rem',
+                                width: leftButtonHovered ? '0px' : '3rem', 
+                            }} 
+                        onClick={OnBackButtonClicked} 
+                        className="arrow center-parent" >
                     <img className="mobile-only" src={up} alt="previous" />
                     <img className="desktop-only" src={left} alt="previous" />
                 </button>
@@ -44,12 +57,25 @@ const Steps = ({steps, ingredients}) => {
                     </div>
                 }
             </div>
-            <div className="next-step center-parent" onClick={OnNextButtonClicked}>
-                <button style={ { display: index < steps.length-1 ? 'block' : 'none' } } onClick={OnNextButtonClicked} className="arrow center-parent">
+            <div className={"next-step center-parent" + (index < steps.length-1 ? " no-cursor" : "")} onClick={OnNextButtonClicked}
+                onMouseEnter={(e) => { setRightButtonHovered(index < steps.length-1); setCursorImage(right); }}
+                onMouseLeave={(e) => { setRightButtonHovered(false); }}
+                >
+                <button style={{ 
+                                display: index < steps.length-1 ? 'block' : 'none', 
+                                height: rightButtonHovered ? '0px' : '3rem',
+                                width: rightButtonHovered ? '0px' : '3rem', 
+                            }} 
+                        onClick={OnNextButtonClicked} 
+                        className="arrow center-parent" >
                     <img className="mobile-only" src={down} alt="next" />
                     <img className="desktop-only" src={right} alt="next" />
                 </button>
             </div>
+            <Cursor className="desktop-only" 
+                src_img={cursorImage} 
+                show_cursor={leftButtonHovered || rightButtonHovered} 
+                />
         </div>
     );
 };

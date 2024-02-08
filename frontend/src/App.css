@@ -175,6 +175,8 @@ button:hover {
   height: 3rem;
   border-radius: 50%;
   padding: 0;
+  transition: "all 0.15s ease-out";
+  border: none;
 }
 .arrow img {
   width: 100%;
