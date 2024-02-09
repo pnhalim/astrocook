@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 import React from 'react';
 
 function startRecipe() {
-    console.log("pog");
+    console.log("Hi");
 }
 
 export default function RecentList() {
