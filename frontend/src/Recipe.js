@@ -53,8 +53,6 @@ const Recipe = ({url}) => {
     }, [url]);
     
     const OnStartPressed = (e) => {
-        // var cookie = cookies.get("recent")
-        // console.log(cookie);
         let cookie = Cookies.get("recent");
         let cookieList;
         if(cookie == null) {

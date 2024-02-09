@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Recipe from "./Recipe";
-// Adhav did this and will delete later lol
-// import { RecentSearch } from "./recentSearch.js"
-import { CookiesProvider, useCookies } from "react-cookie";
 
 import logo from './img/chef-hat.png';
 import search from './img/search-icon.png';
+import RecentList from "./Recents";
+
 
 
 const App = () => {
@@ -45,6 +44,9 @@ const App = () => {
           <div className="spacer"></div>
           <div className="center-parent">
             <h2 className="align-small">Recents</h2>
+            <div className="align-small">
+              <div className="recent"><RecentList/></div>
+              </div>
           </div>
         </div>
         :
