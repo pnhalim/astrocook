@@ -12,7 +12,7 @@ export default function RecentList() {
     } 
     else {
         let cookieList = JSON.parse(cookie);
-        const recentList = cookieList.map(item =>
+        const recentList = cookieList.toReversed().map(item =>
             <ul className="recent-list-item" key={item["url"]}>
                 <button
                 className="recent-item"
