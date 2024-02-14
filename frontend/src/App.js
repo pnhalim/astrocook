@@ -23,6 +23,7 @@ const App = () => {
 
     return (
       <div>
+
       {
         url === "" ?
         <div>
@@ -45,7 +46,7 @@ const App = () => {
           <div className="center-parent">
             <h2 className="align-small">Recents</h2>
             <div className="align-small">
-              <div className="recent"><RecentList/></div>
+              <div className="recent"><RecentList  setUrl = {setUrl} setCurrentTextBox={setCurrentTextBox}/></div>
               </div>
           </div>
         </div>
